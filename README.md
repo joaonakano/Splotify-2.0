@@ -15,10 +15,10 @@ Nesta versão do Programa os conteúdos abordados foram: ``Orientação a Objeto
 ---
 
 ### Como executar?
-- Antes de executar esse programa certifique-se que tem as bibliotecas ``Pygame`` e os ``módulos padrão`` de Python instaladas no seu computador.
+- Antes de executar esse programa certifique-se que a biblioteca ``Pygame`` e os ``módulos padrão`` de Python estejam instalados no seu computador.
 - Após isso, abra execute o arquivo ``main.py`` e teste!
 
-Para adicionar músicas, coloque-as na pasta ``music`` e adicione os nomes (example.mp3) no arquivo ``importantFiles/musicastotais.txt``.
+**Para adicionar músicas, coloque-as na pasta ``music`` e adicione os nomes das músicas ``(example.mp3)`` no arquivo ``importantFiles/musicastotais.txt``.**
 
 ---
 

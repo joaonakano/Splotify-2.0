@@ -18,4 +18,6 @@ Nesta versão do Programa os conteúdos abordados foram: ``Orientação a Objeto
 - Antes de executar esse programa certifique-se que tem as bibliotecas Pygame e Threading instaladas no seu computador.
 - Após isso, abra execute o arquivo main.py e teste!
 
+---
+
 #### Integrantes: Boris Philipp Weber Da Luz, Enzo Henrique Gonçalves, João Vinicius Yuji Nakano.

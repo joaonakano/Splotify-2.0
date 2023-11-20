@@ -12,11 +12,13 @@
 
 Nesta versão do Programa os conteúdos abordados foram: ``Orientação a Objetos, Threading`` e ``List Manipulation``.
 
+Para adicionar músicas, coloque-as na pasta ``music`` e adicione os nomes ("music_name".mp3) no arquivo ``importantFiles/musicastotais.txt``.
+
 ---
 
 ### Como executar?
-- Antes de executar esse programa certifique-se que tem as bibliotecas Pygame e Threading instaladas no seu computador.
-- Após isso, abra execute o arquivo main.py e teste!
+- Antes de executar esse programa certifique-se que tem as bibliotecas ``Pygame`` e os ``módulos padrão`` de Python instaladas no seu computador.
+- Após isso, abra execute o arquivo ``main.py`` e teste!
 
 ---
 

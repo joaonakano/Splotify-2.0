@@ -109,7 +109,7 @@ class Tocador:
                 
             elif user_input == 9:
                 self._verificador_mudo = False
-                print(f"A próxima música da playlist será: {self._playlist_atual[self._indice_musica_atual+1 if len(self._playlist_atual) > 1 else self._indice_musica_atual]}")
+                print(f"A próxima música da playlist será: {self._playlist_atual[self._indice_musica_atual+1 if self._indice_musica_atual < len(self._playlist_atual)-1 else 0]}")
                 self.timer(2)
 
             else:

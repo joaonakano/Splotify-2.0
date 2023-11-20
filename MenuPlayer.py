@@ -13,8 +13,8 @@ class AutenticacaoLogin(Autenticacao):                              # Uso de Abs
         return user_login in logins
     
 class AutenticacaoSenha(Autenticacao):                              # Uso de Abstração
-    def autenticar(self, user_senha, senhas):
-        return user_senha in senhas
+    def autenticar(self, user_senha, senhas, indice):
+        return str(senhas[indice]) == str(user_senha)
 
 class MusicPlayer:
     def __init__(self, arquivo_de_musicas, playlist_atual=None):
@@ -35,7 +35,6 @@ class MusicPlayer:
             logins, senhas = leitura.extrair_logins(), leitura.extrair_senhas()
 
             autentica_login = AutenticacaoLogin().autenticar(user_login, logins)                            # Uso de Polimorfismo
-            autentica_senha = AutenticacaoSenha().autenticar(user_senha, senhas)                            # Uso de Polimorfismo
 
             if user_input == 1:
                 if user_login not in logins:
@@ -47,9 +46,10 @@ class MusicPlayer:
                     Tocador().limpar_tela()
 
             elif user_input == 2:
-                chave = logins.index(user_login) == senhas.index(user_senha)
-                
-                if autentica_login and autentica_senha and chave:
+                indice = logins.index(user_login)
+                autentica_senha = AutenticacaoSenha().autenticar(user_senha, senhas, indice)                # Uso de Polimorfismo
+
+                if autentica_login and autentica_senha:
                     print("\033[1;32m\n Acesso liberado!", end="\033[0;37m\n")
                     Tocador().timer(1)
                     break

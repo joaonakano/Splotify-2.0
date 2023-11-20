@@ -1,4 +1,4 @@
-# Splotify-3.0
+# Splotify-2.0
 ## Repo para armazenamento e documentação do nosso Projeto Bimestral II.
 
 <p align="center">

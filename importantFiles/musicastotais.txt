@@ -7,3 +7,6 @@ game_mashup.mp3
 hey_ya.mp3
 kill_again.mp3
 ms_jackson.mp3
+Straight_Outta_Compton.mp3
+No_More_Questions.mp3
+Let_It_Happen.mp3

@@ -6,6 +6,7 @@
 </p>
 
 O projeto foi criado no intuito de aplicar conceitos de Orientação a Objetos, Threading e List Manipulation em um player de música feito em Python.
+
 ---
 
 - Antes de executar esse programa certifique-se que tem as bibliotecas Pygame e Threading instaladas no seu computador.

@@ -3,6 +3,7 @@ from ReadWrite import Leitura, Escrita
 from abc import ABC, abstractmethod
 from Player import Tocador
 
+# ----------------------------- Auth Classes -----------------------------
 class Autenticacao(ABC):
     @abstractmethod
     def autenticar(self, login, lista):
@@ -15,14 +16,17 @@ class AutenticacaoLogin(Autenticacao):                              # Uso de Abs
 class AutenticacaoSenha(Autenticacao):                              # Uso de Abstração
     def autenticar(self, user_senha, senhas, indice):
         return str(senhas[indice]) == str(user_senha)
+# ----------------------------- End Auth Classes -----------------------------
 
+# ----------------------------- Login / Start -----------------------------
 class MusicPlayer:
     def __init__(self, arquivo_de_musicas, playlist_atual=None):
         self._tocador = None
         self._arquivo = arquivo_de_musicas
         self._playlist_atual = playlist_atual
         self._playlists = OrganizadorPlaylist(self._arquivo).ler_arquivo()
-    
+
+    # ----------------------------- Login Screen -----------------------------
     def tela_login(self):
         Tocador().limpar_tela()
         leitura, escrita = Leitura(), Escrita()
@@ -61,13 +65,16 @@ class MusicPlayer:
 
             else:
                 print("\033[1;31;40m\n Opção errada!", end="\033[0;37m")
-        
-
+    # ----------------------------- End Login Screen -----------------------------
+    
+    # ----------------------------- Available Playlist Print -----------------------------
     def printar_playlist(self):
         Tocador().limpar_tela()
         for i in range(len(self._playlists)):
             print(f" * Playlist [{i}]: {self._playlists[i]} \n")
+    # ----------------------------- End Available Playlist Print -----------------------------
 
+    # ----------------------------- Playlist Selection -----------------------------
     def selecionar_playlist(self):
         self.printar_playlist()
         while True:
@@ -80,7 +87,9 @@ class MusicPlayer:
         self._playlist_atual = self._playlists[user_input_p]
         self._tocador = Tocador(self._playlists, self._playlist_atual)
         self._tocador.tocar_musica()
+    # ----------------------------- End Playlist Selection -----------------------------
 
+    # ----------------------------- Main Menu -----------------------------
     def lancar_menu_inicial(self):
         print("""\033[0;32m
     /$$$$$$            /$$             /$$     /$$  /$$$$$$          
@@ -117,8 +126,10 @@ class MusicPlayer:
             else:
                 print("Inválido!")
                 Tocador().timer(1)
+    # ----------------------------- End Main Menu -----------------------------
+# ----------------------------- End Login / Start -----------------------------
 
-
+# ----------------------------- Read Music List -----------------------------
 class OrganizadorPlaylist:
     def __init__(self, nome_arquivo):
         self._nome_arquivo = nome_arquivo
@@ -129,3 +140,4 @@ class OrganizadorPlaylist:
             linhas = [x.replace("\n", "") for x in linhas_brutas]
         self._playlists_compactadas = [linhas[x:x+3] for x in range(0, len(linhas), 3)]
         return self._playlists_compactadas
+# ----------------------------- End Read Music List -----------------------------

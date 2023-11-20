@@ -1,6 +1,6 @@
 # Splotify-2.0
 ## Um tocador de músicas feito em Python
-
+<br>
 <p align="center">
   <img src="https://github.com/joaonakano/Splotify-2.0/assets/129879125/e49722b8-ce74-43bf-8440-89d6aa8eae79">
 </p>

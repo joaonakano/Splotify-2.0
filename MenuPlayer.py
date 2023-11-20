@@ -36,7 +36,6 @@ class MusicPlayer:
 
             autentica_login = AutenticacaoLogin().autenticar(user_login, logins)                            # Uso de Polimorfismo
             autentica_senha = AutenticacaoSenha().autenticar(user_senha, senhas)                            # Uso de Polimorfismo
-            chave = logins.index(user_login) == senhas.index(user_senha)
 
             if user_input == 1:
                 if user_login not in logins:
@@ -48,6 +47,8 @@ class MusicPlayer:
                     Tocador().limpar_tela()
 
             elif user_input == 2:
+                chave = logins.index(user_login) == senhas.index(user_senha)
+                
                 if autentica_login and autentica_senha and chave:
                     print("\033[1;32m\n Acesso liberado!", end="\033[0;37m\n")
                     Tocador().timer(1)

@@ -38,9 +38,9 @@ class Escrita(Leitura):                                                     # Us
         super().__init__()
 
     def adicionar_login(self, login):
-        with open("logins.txt", 'a', encoding='utf-8') as arquivo:
+        with open("importantFiles/logins.txt", 'a', encoding='utf-8') as arquivo:
             arquivo.write('\n'+login)                                       # Uso da Escrita de Arquivos
 
     def adicionar_senha(self, senha):
-        with open("senhas.txt", 'a', encoding='utf-8') as arquivo:
+        with open("importantFiles/senhas.txt", 'a', encoding='utf-8') as arquivo:
             arquivo.write('\n'+senha)                                       # Uso da Escrita de Arquivos

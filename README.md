@@ -5,7 +5,9 @@
   <img src="https://github.com/joaonakano/Splotify-2.0/assets/129879125/e49722b8-ce74-43bf-8440-89d6aa8eae79">
 </p>
 
-O projeto foi criado no intuito de aplicar conceitos de Orientação a Objetos, Threading e List Manipulation em um player de música feito em Python.
+*O projeto foi criado no intuito de aplicar conceitos aprendidos durante a graduação em Programação e Sistemas Computacionais em um player de música simples e elegante construído em Python.* - NAKANO, João.
+
+Nesta versão do Programa os conteúdos abordados foram: ``Orientação a Objetos, Threading`` e ``List Manipulation``.
 
 ---
 
